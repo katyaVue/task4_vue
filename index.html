@@ -29,11 +29,6 @@
 <!--},-->
 <!--],-->
 
-
-
-
-
-
 <div id="app">
     <div class="thinks">
         <h2>Список працівників:</h2>
@@ -46,35 +41,29 @@
 </div>
 <script>
     const {createApp} = Vue
-    createApp({
-        data() {
-            return {
-                workersList: [
-                    {
-                        id: '111',
-                        name: 'Іванов',
-                        salary: 10000,
-                    },
-                    {
-                        id: '112',
-                        name: 'Петров',
-                        salary: 20000,
-                    },
-                    {
-                        id: '113',
-                        name: 'Сидоров',
-                        salary: 50000,
-                    },
-                ],
-
-            }
+    const workersList = [
+        {
+            id: '111',
+            name: 'Іванов',
+            salary: 10000,
         },
-        methods: {
-
+        {
+            id: '112',
+            name: 'Петров',
+            salary: 20000,
         },
+        {
+            id: '113',
+            name: 'Сидоров',
+            salary: 50000,
+        },
+    ]
+    const app = createApp({
         computed: {
-
-        }
+            workersList() {
+                return workersList
+            },
+        },
     }).mount('#app')
 </script>
 </body>
